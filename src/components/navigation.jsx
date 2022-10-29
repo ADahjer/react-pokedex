@@ -1,6 +1,8 @@
 import React from 'react'
+import SearchBar from './SearchBar';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import Stack from 'react-bootstrap/Stack';
 
 const Navigation = () => {
     //const logoUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png';
@@ -8,21 +10,24 @@ const Navigation = () => {
     const navVariant = 'dark'
 
     return (
-        <>
+        <div>
             <Navbar bg={navVariant} variant={navVariant}>
                 <Container>
-                    <Navbar.Brand>
-                        <img 
-                            src={logoUrl}
-                            alt='Logo'
-                            width={60}
-                            height={60}
-                        />
-                        React-Pokedex
-                    </Navbar.Brand>
+                    <Stack direction='horizontal' className='w-100'>
+                        <Navbar.Brand>
+                            <img 
+                                src={logoUrl}
+                                alt='Logo'
+                                width={60}
+                                height={60}
+                            />
+                            React-Pokedex
+                        </Navbar.Brand>
+                        <SearchBar className='ms-auto' />
+                    </Stack>
                 </Container>
             </Navbar>
-        </>
+        </div>
     )
 }
 
