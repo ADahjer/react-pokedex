@@ -43,6 +43,16 @@
     gap: 1.2rem;
 }
 
+@media (max-width: 600px) {
+    .pokecontainer {
+        display: block;
+    }
+    .pokecard {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+}
+
 .pokecard {
     width: 18rem;
     cursor: pointer;
