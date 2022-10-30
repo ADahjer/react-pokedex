@@ -14,7 +14,7 @@ const SearchBar = ({className}) => {
     }
 
     return (
-        <div className={className}>
+        <div className='ms-auto'>
             <InputGroup onChange={onChange}>
                 <Form.Control
                 placeholder="Search pokemon"

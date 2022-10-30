@@ -41,9 +41,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.2rem;
-    justify-content: space-around;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 .pokecard {
@@ -183,3 +180,9 @@
     background-color: var(--fairy);
     border-color: var(--fairy-darker);
 }
+ /* end of pokemon types */
+
+ .pagination__buttons {
+    display: flex;
+    justify-content: center;
+ }

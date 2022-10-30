@@ -23,7 +23,7 @@ const Navigation = () => {
                             />
                             React-Pokedex
                         </Navbar.Brand>
-                        <SearchBar className='ms-auto' />
+                        <SearchBar />
                     </Stack>
                 </Container>
             </Navbar>
