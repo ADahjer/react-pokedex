@@ -17,11 +17,11 @@ const SearchBar = ({className}) => {
         <div className={className}>
             <InputGroup onChange={onChange}>
                 <Form.Control
-                placeholder="Buscar pokemon"
-                aria-label="Buscar pokemon"
+                placeholder="Search pokemon"
+                aria-label="Search pokemon"
                 aria-describedby="search-button"
                 />
-                <Button variant="outline-light" id="search-button" onClick={onClick}>Buscar</Button>
+                <Button variant="outline-light" id="search-button" onClick={onClick}>Search</Button>
             </InputGroup>
         </div>
     )
