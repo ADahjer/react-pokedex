@@ -1,15 +1,16 @@
 import React from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
-import { totalPages } from '../api/api';
 
-const Pagination = ({page, setPage}) => {
+const Pagination = ({page, setPage, totalPages, isLoading}) => {
 
     const onPrevious = () => {
         setPage(page - 1);
+        isLoading(true);
     }
 
     const onNext = () => {
         setPage(page + 1);
+        isLoading(true);
     }
 
     return (

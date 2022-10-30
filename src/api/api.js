@@ -1,6 +1,4 @@
-const limit = 20;
-const totalPokemon = 1154;
-export const totalPages = limit / totalPokemon;
+export const limit = 20;
 
 export const pokemonByName = async (name) => {
     const url = 'https://pokeapi.co/api/v2/pokemon/';
