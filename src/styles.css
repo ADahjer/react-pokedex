@@ -315,6 +315,14 @@ body {
     width: 4.5rem;
  }
 
+.doubleWeak {
+    cursor: pointer;
+}
+
+ .doubleWeak::after {
+    content: " *";
+ }
+
 @media (max-width: 600px) {
     .pokemon_info__stats {
         display: block;

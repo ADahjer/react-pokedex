@@ -21,8 +21,6 @@ const PokeContainer = () => {
             setPokemons(results);
             setTotal(Math.ceil(data.count/limit));
             isLoading(false);
-            console.log(data);
-            console.log(results);
         } catch (error) {
             console.log(error);
         }
