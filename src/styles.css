@@ -287,7 +287,29 @@ body {
     text-transform: lowercase;
 }
 
-.ability__button {
-    border-radius: 2.5rem;
-    margin-left: 0.5rem;
-}
+@media (max-width: 600px) {
+    .pokemon_info__stats {
+        display: block;
+    }
+
+    .pokemon_info__image {
+        display: block;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .pokemon_info__description {
+        display: block;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .pokemon_info__information {
+        display: block;
+        max-width: 100%;
+    }
+
+    .stat {
+        margin-top: 0.5rem;
+    }
+ }
