@@ -123,12 +123,13 @@ const TypeWeakness = ({pokemon}) => {
                                                 {weakness}
                                             </li>
                                         )
+                                    } else {
+                                        return (
+                                            <li className={`${weakness} type`} key={idx}>
+                                                {weakness}
+                                            </li>
+                                        )
                                     }
-                                    return (
-                                        <li className={`${weakness} type`} key={idx}>
-                                            {weakness}
-                                        </li>
-                                    )
                                 })
                             }
                             

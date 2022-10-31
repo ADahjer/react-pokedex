@@ -52,7 +52,7 @@ const PokeContainer = () => {
             <Pagination 
                 page={page}
                 setPage={setPage}
-                totalPages={total}
+                isLoading={isLoading}
             />
         </Container>
     )
