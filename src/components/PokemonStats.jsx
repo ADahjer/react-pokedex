@@ -5,7 +5,7 @@ import Loading from './Loading';
 const PokemonStats = ({pokemon}) => {
 
     const [description, setDescription] = useState('');
-    const [ability, setAbility] = useState('');
+    const [ability, setAbility] = useState({});
     const [loading, isLoading] = useState(true);
 
     const getDescription = async () => {
@@ -14,9 +14,14 @@ const PokemonStats = ({pokemon}) => {
         promises.push(await customSeach(pokemon.abilities[0].ability.url));
         const results = await Promise.all(promises);
         let desc = results[0].flavor_text_entries.find(entry => entry.language.name === 'en');
+        const abiDesc = results[1].flavor_text_entries.find(entry => entry.language.name === 'en');
+        const abi = {
+            name: results[1].name,
+            desc: abiDesc
+        };
         desc = desc.flavor_text.replace('', ' ').toLowerCase();
         setDescription(desc);
-        setAbility(results[1])
+        setAbility(abi);
         isLoading(false);
     }
 
@@ -46,7 +51,7 @@ const PokemonStats = ({pokemon}) => {
                         </div>
                         <div className='stat'>
                             <p className='stat__title'>{ability.name}</p>
-                            <p className='stat__desc'>{ability.flavor_text_entries[0].flavor_text}</p>
+                            <p className='stat__desc'>{ability.desc.flavor_text}</p>
                         </div>
                     </div>
                 </div>

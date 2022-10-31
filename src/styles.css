@@ -335,9 +335,24 @@ body {
     .pokemon_info__information {
         display: block;
         max-width: 100%;
+        height: 100%;
+        padding: 1rem;
     }
 
     .stat {
         margin-top: 0.5rem;
+    }
+
+    .typeWeakness {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .types {
+        gap: 0.5rem;
+    }
+
+    .type {
+        width: 7rem;
     }
  }
