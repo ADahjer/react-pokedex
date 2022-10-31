@@ -5,6 +5,7 @@ import { pokemonByName } from '../api/api';
 import Container from 'react-bootstrap/Container';
 import PokemonStats from '../components/PokemonStats';
 import Loading from '../components/Loading';
+import TypeWeakness from '../components/TypeWeakness';
 
 const PokemonInfo = () => {
     const {id} = useParams();
@@ -36,6 +37,8 @@ const PokemonInfo = () => {
                             <img src={pokemon.sprites.other['official-artwork'].front_default} alt={pokemon.name} className='pokemon_info__image'/>
                             <PokemonStats pokemon={pokemon} />
                         </div>
+
+                        <TypeWeakness pokemon={pokemon} />
                     </>
                     
                 }

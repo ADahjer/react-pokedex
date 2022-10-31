@@ -13,7 +13,6 @@ const PokemonStats = ({pokemon}) => {
         promises.push(await customSeach(pokemon.species.url));
         promises.push(await customSeach(pokemon.abilities[0].ability.url));
         const results = await Promise.all(promises);
-        console.log(results);
         let desc = results[0].flavor_text_entries.find(entry => entry.language.name === 'en');
         desc = desc.flavor_text.replace('', ' ').toLowerCase();
         setDescription(desc);

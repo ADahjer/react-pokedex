@@ -266,8 +266,9 @@ body {
     height: 20rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    text-align: center;
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-radius: 1.25rem;
     border: 0.15rem solid;
  }
@@ -286,6 +287,33 @@ body {
     font-size: x-large;
     text-transform: lowercase;
 }
+
+.typeWeakness {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+ }
+
+.typeWeakness__title {
+    text-align: left;
+    font-size: large;
+}
+
+ .types {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0;
+ }
+
+ .type {
+    padding: 0.25rem;
+    text-align: center;
+    border-radius: 1.25rem;
+    width: 4.5rem;
+ }
 
 @media (max-width: 600px) {
     .pokemon_info__stats {
