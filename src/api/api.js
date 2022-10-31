@@ -15,3 +15,9 @@ export const pagination = async (page) => {
     const data = await result.json();
     return data;
 }
+
+export const customSeach = async (url) => {
+    const result = await fetch(url);
+    const data = await result.json();
+    return data;
+}

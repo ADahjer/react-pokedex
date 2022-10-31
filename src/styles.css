@@ -1,3 +1,6 @@
+@import url('/node_modules/normalize.css/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+
 :root {
     --normal: #A8A77A;
     --normal-darker: #7B7B51;
@@ -35,6 +38,24 @@
     --steel-darker: #7979A4;
     --fairy: #D685AD;
     --fairy-darker: #B83D7A;
+}
+
+* {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    margin: 0;
+}
+
+a:hover {
+    color: black;
 }
 
 .pokecontainer {
@@ -202,3 +223,63 @@
     justify-content: center;
     margin: 5rem 0;
  }
+
+ /*pokemon info*/
+
+ .pokemon_info__name {
+    text-transform: uppercase;
+    text-align: center;
+ }
+
+ .pokemon_info__id {
+    color: #666;
+ }
+
+.pokemon_info__stats {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+ .pokemon_info__image {
+    width: 30rem;
+ }
+
+ .pokemon_info__description {
+    font-size: large;
+    width: 30rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+ }
+
+ .pokemon_info__information {
+    width: 30rem;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    text-align: center;
+    border-radius: 1.25rem;
+    border: 0.15rem solid;
+ }
+
+ .stat {
+    align-self: center;
+    color: white;
+ }
+
+ .stat__title {
+    font-size: large;
+ }
+
+.stat__desc {
+    color: black;
+    font-size: x-large;
+    text-transform: lowercase;
+}
+
+.ability__button {
+    border-radius: 2.5rem;
+    margin-left: 0.5rem;
+}

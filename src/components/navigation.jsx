@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Stack from 'react-bootstrap/Stack';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     //const logoUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png';
@@ -14,15 +15,17 @@ const Navigation = () => {
             <Navbar bg={navVariant} variant={navVariant}>
                 <Container>
                     <Stack direction='horizontal' className='w-100'>
-                        <Navbar.Brand>
-                            <img 
-                                src={logoUrl}
-                                alt='Logo'
-                                width={60}
-                                height={60}
-                            />
-                            React-Pokedex
-                        </Navbar.Brand>
+                        <Link to={'/'}>
+                            <Navbar.Brand>
+                                <img 
+                                    src={logoUrl}
+                                    alt='Logo'
+                                    width={60}
+                                    height={60}
+                                />
+                                React-Pokedex
+                            </Navbar.Brand>
+                        </Link>
                         <SearchBar />
                     </Stack>
                 </Container>

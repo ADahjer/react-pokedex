@@ -1,16 +1,20 @@
 import React, {useState} from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
-const SearchBar = ({className}) => {
+const SearchBar = () => {
 
     const [search, setSearch] = useState('');
+
+    const navigate = useNavigate();
+
     const onChange = (e) => {
         setSearch(e.target.value);
     }
     const onClick = () => {
-        alert(search.toLowerCase());
+        navigate(`/pokemon/${search}`);
     }
 
     return (
