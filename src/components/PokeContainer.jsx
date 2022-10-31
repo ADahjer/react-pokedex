@@ -36,6 +36,7 @@ const PokeContainer = () => {
                 page={page}
                 setPage={setPage}
                 isLoading={isLoading}
+                totalPages={total}
             />
             {
                 loading ?
@@ -53,6 +54,7 @@ const PokeContainer = () => {
                 page={page}
                 setPage={setPage}
                 isLoading={isLoading}
+                totalPages={total}
             />
         </Container>
     )

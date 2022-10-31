@@ -54,6 +54,8 @@ const TypeWeakness = ({pokemon}) => {
 
             if (weaknessName.length > 1) {
                 weaknessName = weaknessName[0].concat(weaknessName[1]);
+            } else if(weaknessName.length === 1) {
+                weaknessName = weaknessName[0];
             }
 
             if (halfDamageName.length > 1) {
@@ -115,6 +117,7 @@ const TypeWeakness = ({pokemon}) => {
                     <div>
                         <p className='typeWeakness__title'>Weakness</p>
                         <ul className='types'>
+                        {console.log(weaknesses)}
                             {
                                 weaknesses.map((weakness, idx) => {
                                     if (doubleWeak.includes(weakness)) {
